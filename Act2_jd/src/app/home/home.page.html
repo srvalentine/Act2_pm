@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="selectedSegment">
+      <ion-segment-button value="explab">Experiencia Laboral</ion-segment-button>
+      <ion-segment-button value="datos">Mis Datos</ion-segment-button>
+      <ion-segment-button value="cert">Certificaciones</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ng-container *ngIf="selectedSegment === 'explab'">
+  <ion-content class="ion-padding">
+    
+    <div class="ion-text-center">
+      <ion-text class="titulo_principal">Experiencia Laboral</ion-text>
+      <p></p>
+    </div>
+
+  <ion-item>
+    <ion-label position="floating">Empresa:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Año inicio:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>¿Trabaja actualmente en esta empresa?</ion-label>
+    <ion-select>
+      <ion-select-option value="si">Sí</ion-select-option>
+      <ion-select-option value="no">No</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">(Opcional) Año termino:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Cargo:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" class="ion-margin-top">Guardar</ion-button>
+  <ion-button expand="full" class="ion-margin-bottom">Limpiar</ion-button>
+
+  </ion-content>
+</ng-container>
+
+<ng-container *ngIf="selectedSegment === 'datos'">
+  <ion-content class="ion-padding">
+
+    <div class="ion-text-center">
+      <ion-text class="titulo_principal">Mis Datos</ion-text>
+      <p></p>
+      <ion-label class="ion-padding">Usuario: </ion-label>
+      <p></p>
+    </div>
+
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Apellido</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Nivel de Educación</ion-label>
+    <ion-select>
+      <ion-select-option value="primaria">Primaria</ion-select-option>
+      <ion-select-option value="secundaria">Secundaria</ion-select-option>
+      <ion-select-option value="universidad">Universidad</ion-select-option>
+      <ion-select-option value="vacio"></ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="full" class="ion-margin-top">Mostrar</ion-button>
+  <ion-button expand="full" class="ion-margin-bottom">Limpiar</ion-button>
+
+  </ion-content>
+</ng-container>
+
+<ng-container *ngIf="selectedSegment === 'cert'">
+  <ion-content class="ion-padding">
+    
+    <div class="ion-text-center">
+      <ion-text class="titulo_principal">Certificados</ion-text>
+      <p></p>
+    </div>
+
+  <ion-item>
+    <ion-label position="floating">Nombre certificado:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Fecha de obtención:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>¿Vence el certificado?</ion-label>
+    <ion-select>
+      <ion-select-option value="si">Sí</ion-select-option>
+      <ion-select-option value="no">No</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">(Opcional) Fecha de vencimiento:</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" class="ion-margin-top">Guardar</ion-button>
+  <ion-button expand="full" class="ion-margin-bottom">Limpiar</ion-button>
+
+
+  </ion-content>
+</ng-container>

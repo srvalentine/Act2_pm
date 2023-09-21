@@ -1,0 +1,7 @@
+{
+  "name": "Act2_jd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
